@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4210153174469507549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6922654563847149350}
+  - component: {fileID: 3865309817263338420}
+  - component: {fileID: 6737671557629397412}
+  m_Layer: 0
+  m_Name: CanvasManager 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6922654563847149350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4210153174469507549}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3865309817263338420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4210153174469507549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99027b835552b844a6663a523004c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainCanvas: {fileID: 0}
+  MainLogo: {fileID: 0}
+  StartBtn: {fileID: 0}
+  MainSettingBtn: {fileID: 0}
+  EndBtn: {fileID: 0}
+  FadeIn: {fileID: 0}
+  s: 
+  DeadCanvas: {fileID: 0}
+  InGameCanvas: {fileID: 0}
+  InvenBtn: {fileID: 0}
+  InGameSettingBtn: {fileID: 0}
+  InGameEndBtn: {fileID: 0}
+  InGameHPBar: {fileID: 0}
+  InGameHPBarSlider: {fileID: 0}
+  MainResolution: {fileID: 0}
+  InGameResolution: {fileID: 0}
+  InventoryWindow: {fileID: 0}
+  SettingWindow: {fileID: 0}
+  Player: {fileID: 0}
+  PointEnter: {fileID: 0}
+  MainBGM: {fileID: 0}
+  MainSlider: {fileID: 0}
+  InGameSlider: {fileID: 0}
+  SoundValue: 0
+--- !u!114 &6737671557629397412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4210153174469507549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2477cd24cefe0646b98939905e870cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainCamGam: {fileID: 0}
+  Player: {fileID: 0}

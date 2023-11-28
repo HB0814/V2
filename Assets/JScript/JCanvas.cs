@@ -76,7 +76,7 @@ public class JCanvas : MonoBehaviour
     private int nResolutionNum;
     
     [Header("==============================================")] [Space(1f)]
-    private bool isOpen;
+    public bool isOpen;
     
     /// <summary> [게임 오브젝트] 엔드 버튼 오브젝트 </summary>
     [Header("창 인벤토리")]

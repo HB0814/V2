@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [Header("ÇÃ·¹ÀÌ¾î »óÅÂ")]
+    [Header("ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½")]
     public float curLife;
     public float maxLife;
     public float curCoolDown;
@@ -16,13 +16,13 @@ public class Player : MonoBehaviour
     
     public bool isStart;
 
-    [Header("½ºÅ×ÀÌÅÍ½º ÄÚ¾î")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í½ï¿½ ï¿½Ú¾ï¿½")]
     public bool stateCore;
 
-    [Header("Á¦¹° °¹¼ö")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")]
     public float sacrifice;
 
-    [Header("½ºÅ³ ÄÚ¾î º¸À¯ ¿©ºÎ")]
+    [Header("ï¿½ï¿½Å³ ï¿½Ú¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")]
     public bool CrouchCore;
     public bool RollCore;
     public bool DropCore;
@@ -31,13 +31,13 @@ public class Player : MonoBehaviour
     public enum Skill_Core { Crouch, Roll, Drop, Summon }
     public Skill_Core skill_Type;
 
-    [Header("ÇöÀç »ç¿ëÁßÀÎ ½ºÅ³ ÄÚ¾î")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å³ ï¿½Ú¾ï¿½")]
     public bool isCrouchCore;
     public bool isRollCore;
     public bool isDropCore;
     public bool isSummonCore;
 
-    [Header("ÇöÀç ÀåÂøÁßÀÎ ½ºÅ³ ÄÚ¾î")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å³ ï¿½Ú¾ï¿½")]
     public bool equipCrouch;
     public bool equipRoll;
     public bool equipDrop;
@@ -45,12 +45,12 @@ public class Player : MonoBehaviour
 
     public float equipCount;
 
-    [Header("ÇöÀç ¼ÒÈ¯¼ö °¹¼ö")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")]
     public int followCount;
     int maxFollowCount;
     int hpDecrease;
 
-    [Header("°ø°Ý Å¸ÀÔ")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½")]
     public bool isNormal;
     public bool isPower;
     public bool isSharp;
@@ -68,11 +68,11 @@ public class Player : MonoBehaviour
 
     float roll_Speed;
 
-    //°ø°Ý µô·¹ÀÌ
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     float curAttackDelay;
     float maxAttackDelay;
 
-    //½ºÅ³ Áö¼Ó½Ã°£
+    //ï¿½ï¿½Å³ ï¿½ï¿½ï¿½Ó½Ã°ï¿½
     float curSkillTime;
     float maxSkillTime;
 
@@ -92,12 +92,12 @@ public class Player : MonoBehaviour
     public bool OnSkill;
 
     //Trigger
-    bool isTouchRoom;       //Åõ¸íº® ¹Ì±¸Çö
+    bool isTouchRoom;       //ï¿½ï¿½ï¿½ï¿½ ï¿½Ì±ï¿½ï¿½ï¿½
 
-    [Header("Æ®¸®°Å")]
+    [Header("Æ®ï¿½ï¿½ï¿½ï¿½")]
     public bool isElite;
     public bool isBoss;
-    public bool clearMap;       //Å¬¸®¾î ½Ã Æ®¸®°Å ÀÛµ¿(¹Ì±¸Çö)
+    public bool clearMap;       //Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½Ûµï¿½(ï¿½Ì±ï¿½ï¿½ï¿½)
 
     public bool isCameraMove;
 
@@ -108,11 +108,11 @@ public class Player : MonoBehaviour
 
     bool isCheat;
 
-    [Header("¿ÀºêÁ§Æ®")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®")]
     public ObjectManager objectManager;
     public GameManager gameManager;
 
-    [Header("ÆÄÆ¼Å¬")]
+    [Header("ï¿½ï¿½Æ¼Å¬")]
     public GameObject crouchParticle;
     public GameObject right_DashParticle;
     public GameObject left_DashParticle;
@@ -120,12 +120,12 @@ public class Player : MonoBehaviour
     public GameObject coreChangeParticle;
     public GameObject healingParticle;
 
-    [Header("°ø°Ý")]
+    [Header("ï¿½ï¿½ï¿½ï¿½")]
     public BoxCollider2D meleeAttack;
     public BoxCollider2D dropAttack;
     public CircleCollider2D rollAttack;
 
-    [Header("ÇÃ·¹ÀÌ¾î »ç¿îµå")]
+    [Header("ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½")]
     public AudioSource walkSound;
     public AudioSource jumpSound;
     public AudioSource HitSound_1;
@@ -150,32 +150,32 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        //ÃÖ´ëÃ¼·Â&ÀüÃ¼Ã¼·Â
+        //ï¿½Ö´ï¿½Ã¼ï¿½ï¿½&ï¿½ï¿½Ã¼Ã¼ï¿½ï¿½
         maxLife = 150;
         curLife = 150;
 
-        //ÄðÅ¸ÀÓ
+        //ï¿½ï¿½Å¸ï¿½ï¿½
         maxCoolDown = 0;
         crouchCoolDown = 0;
         rollCoolDown = 0;
         dropCoolDown = 0;
         summonCoolDown = 0;
 
-        //°ø°Ý·Â&¼Óµµ&±¸¸£±â ¼Óµµ
+        //ï¿½ï¿½ï¿½Ý·ï¿½&ï¿½Óµï¿½&ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Óµï¿½
         dmg = 15;
         speed = 5;
         roll_Speed = speed;
 
-        //°ø°Ý¼Óµµ&ÃÖ´ë½ºÅ³½Ã°£
+        //ï¿½ï¿½ï¿½Ý¼Óµï¿½&ï¿½Ö´ë½ºÅ³ï¿½Ã°ï¿½
         maxAttackDelay = 0.5f;
         maxSkillTime = 2f;
 
-        //¼ÒÈ¯¼ö Á¤º¸
+        //ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         maxFollowCount = 3;
         followCount = 0;
         hpDecrease = 25;
 
-        //½ºÅ³ÄÚ¾î ¹× °ø°ÝÅ¸ÀÔ
+        //ï¿½ï¿½Å³ï¿½Ú¾ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½
         CrouchCore = true;
         skill_Type = Skill_Core.Crouch;
         equipCount = 4;
@@ -226,8 +226,9 @@ public class Player : MonoBehaviour
 
         LifeCheck();
         StartCoroutine(heal());
+        JCanvas.Instance.HPBarSet(maxLife,curLife);
     }
-    //ÇÃ·¹ÀÌ¾î ÀÌµ¿
+    //ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½Ìµï¿½
     void MoveMent()
     {
         if (!clearMap && Move_Axis == 1)
@@ -276,7 +277,7 @@ public class Player : MonoBehaviour
         rigid.gravityScale = 3;
     }
 
-    //½ÃÀÛ Àü µ¿ÀÛ ºÒ°¡
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½
     void InPut()
     {
         if (!isStart || isCrouch || isCameraMove || isElite || isBoss)
@@ -285,11 +286,11 @@ public class Player : MonoBehaviour
             return;
         }
 
-        Move_Axis = Input.GetAxisRaw("Horizontal"); //ÀÌµ¿
-        isAtt = Input.GetKeyDown(KeyCode.A);          //°ø°Ý
-        isJump = Input.GetKeyDown(KeyCode.S);         //Á¡ÇÁ
-        Q_IsSwitch = Input.GetKeyDown(KeyCode.Q);   //°ø°Ý Å¸ÀÔ ½½·ÔÃ¼ÀÎÁö ³ë¸Ö->ÆÄ¿ö->Á¤¹Ð->½Åºñ
-        isCheat = Input.GetKeyDown(KeyCode.R);      //Ä¡Æ®Å°= Ã¼·Â 100Áõ°¡
+        Move_Axis = Input.GetAxisRaw("Horizontal"); //ï¿½Ìµï¿½
+        isAtt = Input.GetKeyDown(KeyCode.A);          //ï¿½ï¿½ï¿½ï¿½
+        isJump = Input.GetKeyDown(KeyCode.S);         //ï¿½ï¿½ï¿½ï¿½
+        Q_IsSwitch = Input.GetKeyDown(KeyCode.Q);   //ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½->ï¿½Ä¿ï¿½->ï¿½ï¿½ï¿½ï¿½->ï¿½Åºï¿½
+        isCheat = Input.GetKeyDown(KeyCode.R);      //Ä¡Æ®Å°= Ã¼ï¿½ï¿½ 100ï¿½ï¿½ï¿½ï¿½
 
     }
     void Input_Skill()
@@ -299,7 +300,7 @@ public class Player : MonoBehaviour
 
         if (!OnSkill)
         {
-            OnSkill = Input.GetKeyDown(KeyCode.D);      //½ºÅ³
+            OnSkill = Input.GetKeyDown(KeyCode.D);      //ï¿½ï¿½Å³
         }
         else
             curCoolDown = 0;
@@ -355,7 +356,7 @@ public class Player : MonoBehaviour
         meleeAttackSound.enabled = false;
     }
 
-    //½ºÅ³
+    //ï¿½ï¿½Å³
     IEnumerator Skill()
     {
         switch (skill_Type)
@@ -524,14 +525,14 @@ public class Player : MonoBehaviour
             OnSkill = false;
     }
 
-    //Ã¼·Â È®ÀÎ
+    //Ã¼ï¿½ï¿½ È®ï¿½ï¿½
     void LifeCheck()
     {
         if (curLife > maxLife)
             curLife = maxLife;
     }
 
-    //°ø°ÝÅ¸ÀÔ ·ÎÁ÷
+    //ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     IEnumerator Switching_Attack_Type()
     {
         if (Q_IsSwitch)
@@ -539,7 +540,7 @@ public class Player : MonoBehaviour
             weaponChangeSound.enabled = true;
             coreChangeParticle.SetActive(true);
             int num;
-            //4°³ ÀåºñÁß
+            //4ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
             if (equipCount == 4)
             {
                 switch (skill_Type)
@@ -564,7 +565,7 @@ public class Player : MonoBehaviour
                         break;
                 }
             }
-            //3°³ ÀåºñÁß
+            //3ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
             else if (equipCount == 3)
             {
                 num = Equip_Core_3();
@@ -648,7 +649,7 @@ public class Player : MonoBehaviour
                         break;
                 }
             }
-            //2°³ ÀåºñÁß
+            //2ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
             else if (equipCount == 2)
             {
                 num = Equip_Core_2();
@@ -872,7 +873,7 @@ public class Player : MonoBehaviour
         isCheat = false;
     }
 
-    //ÇÇ°Ý
+    //ï¿½Ç°ï¿½
     IEnumerator OnHit(float dmg)
     {
         if (isHit)
@@ -916,7 +917,7 @@ public class Player : MonoBehaviour
         spriteRenderer.color = new Color(1, 1, 1, Alpha);
     }
 
-    //º¸½º ½ÃÀÛ Æ®¸®°Å
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Æ®ï¿½ï¿½ï¿½ï¿½
     IEnumerator EliteStart()
     {
         isElite = true;

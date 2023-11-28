@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public  float harf_ViewHeaight_Y;
     public float harf_ViewHeaight_X;
 
-    [Header("»óÇÏÁÂ¿ì Ä«¸Þ¶ó Å¸°Ù")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½Â¿ï¿½ Ä«ï¿½Þ¶ï¿½ Å¸ï¿½ï¿½")]
     public Transform bossCamera;
 
     public Transform[] target;
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     
     public Vector3[] eliteSkill_Spot;
 
-    [Header("[½ºÆù ÁöÁ¡]{¿ø°Å¸®}{±Ù°Å¸®}{¾ÆÀÌÅÛ¹Ú½º}{³«ÇÏ¹°}{º¸½º}")]
+    [Header("[ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½]{ï¿½ï¿½ï¿½Å¸ï¿½}{ï¿½Ù°Å¸ï¿½}{ï¿½ï¿½ï¿½ï¿½ï¿½Û¹Ú½ï¿½}{ï¿½ï¿½ï¿½Ï¹ï¿½}{ï¿½ï¿½ï¿½ï¿½}")]
     public Transform[] Range_SpawnPoint;
     public Transform[] Shot_SpawnPoint;
     public Transform[] Item_SpawnPoint;
@@ -44,19 +44,19 @@ public class GameManager : MonoBehaviour
     public Transform eliteSpawnPoint;
     public Transform bossSpawnPoint;
 
-    [Header("º¸½º¸Ê Åõ¸íº®")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")]
     public BoxCollider2D[] elite_Border;
     public BoxCollider2D[] boss_Border;
-    [Header("º¸½º¸Ê Æ®¸®°Å")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Æ®ï¿½ï¿½ï¿½ï¿½")]
     public GameObject eliteMonster_Trigger;
     public GameObject boss_Trigger;
 
 
-    [Header("ÇÃ·¹ÀÌ¾î")]
+    [Header("ï¿½Ã·ï¿½ï¿½Ì¾ï¿½")]
     public GameObject player;
-    [Header("¿ÀºêÁ§Æ® ¸Å´ÏÀú")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Å´ï¿½ï¿½ï¿½")]
     public ObjectManager objectManager;
-    [Header("¸ó½ºÅÍ½ºÅ©¸³Æ®")]
+    [Header("ï¿½ï¿½ï¿½Í½ï¿½Å©ï¿½ï¿½Æ®")]
     public Enemy enemyScript;
 
     void Awake()
@@ -67,16 +67,16 @@ public class GameManager : MonoBehaviour
         smoothCamera = false;
         touchingCamera = false;
 
-        delay = 0.01f;  //°Å¸®°¡ 0.01±îÁö Å¸°ÙÁöÁ¡À¸·Î Ä«¸Þ¶ó ÀÌµ¿
-        Move_smoothTime = 0.2f; //Ä«¸Þ¶ó ¼Óµµ
+        delay = 0.01f;  //ï¿½Å¸ï¿½ï¿½ï¿½ 0.01ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½Þ¶ï¿½ ï¿½Ìµï¿½
+        Move_smoothTime = 0.2f; //Ä«ï¿½Þ¶ï¿½ ï¿½Óµï¿½
 
-        //Ä«¸Þ¶ó »çÀÌÁî
+        //Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         harf_ViewHeaight_Y = Camera.main.orthographicSize;
         harf_ViewHeaight_X = Camera.main.orthographicSize * 16 / 9;
         viewHeight_Y = harf_ViewHeaight_Y * 2;
         viewHeight_X = harf_ViewHeaight_X * 2;
 
-        //ÀÌµ¿ Ä«¸Þ¶ó ÁÂÇ¥
+        //ï¿½Ìµï¿½ Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½Ç¥
         target[0].transform.localPosition = new Vector3(0,viewHeight_Y+delay,-1);
         target[1].transform.localPosition = new Vector3(0, -viewHeight_Y + delay, -1);
         target[2].transform.localPosition = new Vector3(viewHeight_X+delay,0, -1);
@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
         //EliteSkillSpot
         eliteSkill_Spot = new Vector3[3];
 
-        SpawnEnemy();//·¹º§ ÁöÁ¤ Àü±îÁö ÀÓ½Ã ½ºÆù
+        SpawnEnemy();//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ó½ï¿½ ï¿½ï¿½ï¿½ï¿½
     }
     void Update()
     {
@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
             SmoothCamera();
         }
     }
-    //Ä«¸Þ¶ó ÀÌµ¿
+    //Ä«ï¿½Þ¶ï¿½ ï¿½Ìµï¿½
     void TouchCamera()
     {
         if (player.transform.position.y + harf_ViewHeaight_Y > target[0].position.y)
@@ -118,7 +118,7 @@ public class GameManager : MonoBehaviour
         {
             isLeftMap = true;
         }
-    }       //Ä«¸Þ¶ó Æ®¸®°Å
+    }       //Ä«ï¿½Þ¶ï¿½ Æ®ï¿½ï¿½ï¿½ï¿½
     void NextMap()
     {
         Player playerLogic = player.GetComponent<Player>();
@@ -184,7 +184,7 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-    }           //´ÙÀ½¸ÊÀ¸·Î Ä«¸Þ¶ó ÀÌµ¿
+    }           //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä«ï¿½Þ¶ï¿½ ï¿½Ìµï¿½
     void SmoothCamera()
     {
         smoothCamera = true;
@@ -194,10 +194,10 @@ public class GameManager : MonoBehaviour
     }
     public void SmoothCameraOn()
     {
-        Invoke("SmoothCamera", 7f);
+        Invoke("SmoothCamera", 3.5f);
     }
 
-    //Ä«¸Þ¶ó Èçµé±â
+    //Ä«ï¿½Þ¶ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void ShakeCam(float power, float shakeTime)
     {
         StartCoroutine(CameraShake(power, shakeTime));
@@ -225,7 +225,7 @@ public class GameManager : MonoBehaviour
     }
     public void Normal()
     {
-        enemyScript.level = Enemy.Level.Easy; //Normal¼±ÅÃ½Ã Easy³­ÀÌµµ ¼³Á¤
+        enemyScript.level = Enemy.Level.Easy; //Normalï¿½ï¿½ï¿½Ã½ï¿½ Easyï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½
     }
     public void Hard()
     {
@@ -261,9 +261,9 @@ public class GameManager : MonoBehaviour
     }
     public void PrintInfo()
     {
-        Debug.Log($"½ºÅÈÄÚ¾î[{StateCoreIndex+1}] ÇöÀç °¹¼ö:"+ (StateCoreIndex+1));
-        Debug.Log($"½ºÅÈÄÚ¾î[{StateCoreIndex}] +°ø°Ý·Â ´É·ÂÄ¡:" + coreInformation[StateCoreIndex].increaseDamage);
-        Debug.Log($"½ºÅÈÄÚ¾î[{StateCoreIndex}] +Ã¼·Â ´É·ÂÄ¡:" + coreInformation[StateCoreIndex].increaseHealth);
+        Debug.Log($"ï¿½ï¿½ï¿½ï¿½ï¿½Ú¾ï¿½[{StateCoreIndex+1}] ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½:"+ (StateCoreIndex+1));
+        Debug.Log($"ï¿½ï¿½ï¿½ï¿½ï¿½Ú¾ï¿½[{StateCoreIndex}] +ï¿½ï¿½ï¿½Ý·ï¿½ ï¿½É·ï¿½Ä¡:" + coreInformation[StateCoreIndex].increaseDamage);
+        Debug.Log($"ï¿½ï¿½ï¿½ï¿½ï¿½Ú¾ï¿½[{StateCoreIndex}] +Ã¼ï¿½ï¿½ ï¿½É·ï¿½Ä¡:" + coreInformation[StateCoreIndex].increaseHealth);
     }
     public void EquipCore()
     {
@@ -273,7 +273,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    //ÀÌÆåÆ®
+    //ï¿½ï¿½ï¿½ï¿½Æ®
     public void Ground_Effect(Vector3 target)
     {
         GameObject ground_Effect = objectManager.MakeObj("ground_Effect");
@@ -324,7 +324,7 @@ public class GameManager : MonoBehaviour
         hit_EffectLogic.Play();
     }
 
-    //¸ó½ºÅÍ ¹× ¾ÆÀÌÅÛ¹Ú½º º¸½º ½ºÆù
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Û¹Ú½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void CreateBoss()
     {
 
@@ -408,7 +408,7 @@ public class GameManager : MonoBehaviour
         eliteSkill_Spot[2] = new Vector3(player.transform.position.x-2, -7);
     }
 
-    //º¸½ºÀü ³«ÇÏ¹° ¹× ¸ó½ºÅÍ ½ºÆù
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¹ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void DropDebris()
     {
         int ranCount = Random.Range(3, 6);
@@ -456,7 +456,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //¼ÒÈ¯¼ö ½ºÆù
+    //ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     public void FollowerSpawn()
     {
         Player playerLogic = player.GetComponent<Player>();
@@ -511,7 +511,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //¸ó½ºÅÍ ´Ù ÀâÀ»½Ã Å¬¸®¾î Á¶°Ç ¹ß»ý(¹Ì±¸Çö)
+    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½(ï¿½Ì±ï¿½ï¿½ï¿½)
     public void MonsterKillCheck()
     {
         Player playerLogic = player.GetComponent<Player>();
