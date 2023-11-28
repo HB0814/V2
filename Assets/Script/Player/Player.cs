@@ -1045,6 +1045,11 @@ public class Player : MonoBehaviour
 
             StartCoroutine(OnHit(debrisLogic.dmg));
         }
+
+        if(collision.gameObject.name=="EndPortal")
+        {
+            Debug.Log("EndPortal");
+        }
     }
     void OnTriggerExit2D(Collider2D collision)
     {
